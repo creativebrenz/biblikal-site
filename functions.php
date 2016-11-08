@@ -44,3 +44,27 @@ require_once(get_template_directory().'/assets/translation/translation.php');
 define ('ROOT', get_template_directory_uri());
 define ('ASSETS', ROOT . '/assets');
 define ('IMG', ASSETS . '/images');
+
+//Woocommerce Integration
+
+function remove_wc_shop_sidebar(){
+	if(is_shop()) {
+		remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10);
+	}
+}
+add_action('template_redirect', 'remove_wc_shop_sidebar');
+
+remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
+remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
+
+add_action('woocommerce_before_main_content', 'my_theme_wrapper_start', 10);
+add_action('woocommerce_after_main_content', 'my_theme_wrapper_end', 10);
+
+function my_theme_wrapper_start() {
+  echo '<div id="content"><div id="inner-content" class="row"><main id="main" class="large-12 medium-12 columns" role="main">';
+}
+
+function my_theme_wrapper_end() {
+  echo '</main>';
+  echo '</div></div>';
+}
