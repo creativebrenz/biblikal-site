@@ -1,0 +1,17 @@
+#Exclude OSX file attributes
+.DS_Store
+
+#Exclude sass related stuff
+.sass-cache/
+assets/scss/
+vendor/foundation-sites/assets/
+vendor/foundation-sites/scss/
+
+#Exclude misc
+node_modules/
+bower_components/
+npm-debug.log
+vendor/foundation-sites/.github
+vendor/foundation-sites/customizer/
+
+
