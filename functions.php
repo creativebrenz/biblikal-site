@@ -68,3 +68,11 @@ function my_theme_wrapper_end() {
   echo '</main>';
   echo '</div></div>';
 }
+
+add_filter( 'woocommerce_product_add_to_cart_text', 'woo_archive_custom_cart_button_text' );    // 2.1 +
+ 
+function woo_archive_custom_cart_button_text() {
+ 
+        return __( 'Buy Now', 'fbcpress' );
+ 
+}
