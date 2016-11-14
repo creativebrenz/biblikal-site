@@ -5093,6 +5093,12 @@ POSTS & CONTENT STYLES
 .bio-page {
   background-image: url('../images/bio_bg.jpg?1478527314');
   background-repeat: no-repeat;
+  background-size: cover;
+}
+.bio-page .entry-content {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 10px;
 }
 
 .contact-page {
@@ -5180,6 +5186,10 @@ POSTS & CONTENT STYLES
 .post-password-form input[type="submit"]:hover, .post-password-form input[type="submit"]:focus {
   background-color: #1583cc;
   color: #fefefe;
+}
+
+.woocommerce ul.products li.product strong {
+  display: inline !important;
 }
 
 /*********************
