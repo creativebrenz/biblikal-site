@@ -76,3 +76,18 @@ function woo_archive_custom_cart_button_text() {
         return __( 'Buy Now', 'fbcpress' );
  
 }
+
+function custom_buy_now_button(){ ?>
+
+	<script>
+		jQuery(document).ready(function(){
+
+			 jQuery('.add_to_cart_button').removeClass('button').html('<img src="<?php echo IMG; ?>/buy-now.png" />');
+
+		});
+	</script>
+
+	<?php
+
+}
+add_action( 'wp_footer', 'custom_buy_now_button', 10);
