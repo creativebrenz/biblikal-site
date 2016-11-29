@@ -1,11 +1,11 @@
 @charset "UTF-8";
 /******************************************************************
-	
+
 Stylesheet: Main Stylesheet
 
 Here's where the magic happens. Here is where you import
 all of your Sass files so they can compile into one
-CSS file. 
+CSS file.
 
 ******************************************************************/
 /******************************************************************
@@ -3949,7 +3949,10 @@ Stylesheet: Main Stylesheet
 GENERAL STYLES
 *********************/
 body {
-  background-color: #000; }
+  background-image: url("../images/biblikal-bg-mod.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; }
 
 /*********************
 LINK STYLES
@@ -3970,7 +3973,8 @@ HEADER STYLES
   list-style: none; }
 
 #title-header {
-  position: relative; }
+  position: relative;
+  padding: 1rem; }
 
 #social-header {
   position: absolute;
@@ -3988,15 +3992,14 @@ NAVIGATION STYLES
   z-index: 1; }
 
 .top-bar, .top-bar ul {
-  background-color: #222;
+  background-color: transparent;
   text-transform: uppercase; }
-  .top-bar .menu .active > a, .top-bar ul .menu .active > a {
+  .top-bar .menu .active > a, .top-bar a:hover, .top-bar a:focus, .top-bar ul .menu .active > a, .top-bar ul a:hover, .top-bar ul a:focus {
     color: #885A26;
-    background-color: transparent; }
+    background-color: transparent;
+    border-bottom: 3px solid #885a26; }
   .top-bar a, .top-bar ul a {
-    color: #fff; }
-  .top-bar a:hover, .top-bar a:focus, .top-bar ul a:hover, .top-bar ul a:focus {
-    color: #885A26; }
+    color: #333; }
 
 .off-canvas-list ul {
   margin-left: 0; }
@@ -4008,17 +4011,11 @@ NAVIGATION STYLES
 /*********************
 POSTS & CONTENT STYLES
 *********************/
-#content #inner-content {
-  padding: 1rem; }
+.off-canvas-content {
+  background-color: transparent; }
 
-.bio-page {
-  background-image: image-url("bio_bg.jpg");
-  background-repeat: no-repeat;
-  background-size: cover; }
-  .bio-page .entry-content {
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #fff;
-    padding: 15px 30px; }
+#content #inner-content {
+  padding: 2rem 1rem; }
 
 .contact-page {
   background-image: image-url("contact_bg.jpg");
