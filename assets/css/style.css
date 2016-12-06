@@ -3948,7 +3948,7 @@ Stylesheet: Main Stylesheet
 /*********************
 GENERAL STYLES
 *********************/
-body {
+body:not(.post-type-archive-product) {
   background-image: url("../images/biblikal-main-picture.jpg");
   background-repeat: no-repeat;
   background-size: auto 100%;
@@ -3997,7 +3997,7 @@ NAVIGATION STYLES
   .top-bar .menu .active > a, .top-bar a:hover, .top-bar a:focus, .top-bar ul .menu .active > a, .top-bar ul a:hover, .top-bar ul a:focus {
     color: #885A26;
     background-color: transparent;
-    border-bottom: 3px solid #885a26; }
+    border-bottom: 3px solid #773E18; }
   .top-bar a, .top-bar ul a {
     color: #333; }
 
@@ -4093,8 +4093,8 @@ POSTS & CONTENT STYLES
     background-color: #1583cc;
     color: #fefefe; }
 
-.woocommerce ul.products li.product strong {
-  display: inline !important; }
+.album-preview {
+  margin-top: 1em; }
 
 /*********************
 IMAGE GALLERY STYLES
@@ -4238,7 +4238,7 @@ FOOTER STYLES
   background-color: #000;
   color: #fff; }
   .footer a {
-    color: #885a26; }
+    color: #773E18; }
 
 /*********************
 FOUNDATION STYLES
@@ -4249,6 +4249,39 @@ PLUGIN STYLES
 .gform_body ul {
   list-style: none outside none;
   margin: 0; }
+
+/************************
+CUSTOM WOOCOMMERCE STYLES
+*************************/
+.woocommerce ul.products li.product strong {
+  display: inline !important; }
+
+.woocommerce button.button.alt {
+  background-color: #ffc000;
+  color: #333;
+  border: 2px solid #333; }
+
+.woocommerce button.button.alt.disabled {
+  background-color: gray;
+  border: 0; }
+
+.woocommerce div.product span.price {
+  font-size: 2em;
+  color: #333; }
+
+.woocommerce div.product p.price {
+  color: #5a5b5c; }
+
+.woocommerce div.product form.cart .variations td.value {
+  padding: 0; }
+  .woocommerce div.product form.cart .variations td.value select {
+    margin-bottom: 5px; }
+
+.woocommerce div.product form.cart .variations td.label {
+  background-color: #773E18;
+  padding: 0.5em 1em; }
+  .woocommerce div.product form.cart .variations td.label label {
+    color: #fff; }
 
 /******************************************************************
 
