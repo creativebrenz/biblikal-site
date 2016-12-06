@@ -3949,9 +3949,9 @@ Stylesheet: Main Stylesheet
 GENERAL STYLES
 *********************/
 body {
-  background-image: url("../images/biblikal-bg-mod.jpg");
+  background-image: url("../images/biblikal-main-picture.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: auto 100%;
   background-attachment: fixed; }
 
 /*********************
@@ -4237,6 +4237,8 @@ FOOTER STYLES
   padding: 1em;
   background-color: #000;
   color: #fff; }
+  .footer a {
+    color: #885a26; }
 
 /*********************
 FOUNDATION STYLES
