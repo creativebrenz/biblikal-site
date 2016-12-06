@@ -51,7 +51,7 @@
 					<header class="header" role="banner">
 						<div id="title-header">
 							<h1 class="text-center"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/header-title.png" alt=""></h1>
-							<ul id="social-header" class="menu simple">
+							<ul id="social-header" class="menu simple hide-for-small-only">
 								<li><a href=""><img src="<?php echo get_template_directory_uri(); ?>/assets/images/xfacebook.png" alt=""></a></li>
 								<li><a href=""><img src="<?php echo get_template_directory_uri(); ?>/assets/images/xinstagram.png" alt=""></a></li>
 								<li><a href=""><img src="<?php echo get_template_directory_uri(); ?>/assets/images/xtwitter.png" alt=""></a></li>
