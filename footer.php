@@ -6,7 +6,13 @@
 		    					</nav>
 		    				</div>
 							<div class="large-12 medium-12 columns">
-								<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>.</p>
+								<ul id="social-footer" class="menu simple">
+									<li><span class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>. |</span></li>
+									<li><a href=""><span class="fa fa-facebook"></span></a></li>
+									<li><a href=""><span class="fa fa-instagram"></span></a></li>
+									<li><a href=""><span class="fa fa-twitter"></span></a></li>
+									<li><a href=""><span class="fa fa-youtube"></span></a></li>
+								</ul>
 							</div>
 						</div> <!-- end #inner-footer -->
 					</footer> <!-- end .footer -->
