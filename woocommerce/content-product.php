@@ -28,8 +28,8 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 }
 ?>
 
-<li <?php post_class(); ?> style="width:100%;">
-	<article class="row">
+<article <?php post_class('medium-6 columns'); ?> >
+	<div class="row">
 		<hr>
 		<div class="medium-6 columns text-center">
 			<h3>Product Description</h3>
@@ -50,5 +50,5 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 
 			?>
 		</div>
-	</article>
-</li>
+	</div>
+</article>
