@@ -28,27 +28,33 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 }
 ?>
 
-<article <?php post_class('medium-6 columns'); ?> >
-	<div class="row">
+<div <?php post_class('medium-6 columns product'); ?> >
+	<div class="row collapse">
 		<hr>
-		<div class="medium-6 columns text-center">
-			<h3>Product Description</h3>
+
+		<div class="medium-6 columns">
+			<?php do_action( 'woocommerce_before_shop_loop_item_title' ); ?>
+		</div>
+		<div class="medium-6 columns">
+			<?php
+				do_action( 'woocommerce_shop_loop_item_title' );
+				woocommerce_template_single_price();
+				//do_action( 'woocommerce_after_shop_loop_item' );
+				//do_action( 'woocommerce_after_shop_loop_item_title' );
+				woocommerce_template_single_add_to_cart();
+			?>
+		</div>
+	</div> <!-- end row -->
+
+	<div class="row collapse">
+		<div class="small-12 columns album-preview">
+			<?php woocommerce_template_single_excerpt(); ?>
+		</div>
+		<div class="small-12 columns">
+					<h3>Product Description</h3>
 			<?php
 				the_content();
 			?>
 		</div>
-		<div class="medium-3 columns">
-			<?php do_action( 'woocommerce_before_shop_loop_item_title' ); ?>
-		</div>
-		<div class="medium-3 columns text-center">
-			<?php
-				do_action( 'woocommerce_shop_loop_item_title' );
-				do_action( 'woocommerce_after_shop_loop_item' );
-				do_action( 'woocommerce_after_shop_loop_item_title' );
-
-				 woocommerce_template_single_excerpt();
-
-			?>
-		</div>
 	</div>
-</article>
+</div>

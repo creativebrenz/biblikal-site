@@ -1,42 +1,42 @@
 <?php
 // Theme support options
-require_once(get_template_directory().'/assets/functions/theme-support.php'); 
+require_once(get_template_directory().'/assets/functions/theme-support.php');
 
 // WP Head and other cleanup functions
-require_once(get_template_directory().'/assets/functions/cleanup.php'); 
+require_once(get_template_directory().'/assets/functions/cleanup.php');
 
 // Register scripts and stylesheets
-require_once(get_template_directory().'/assets/functions/enqueue-scripts.php'); 
+require_once(get_template_directory().'/assets/functions/enqueue-scripts.php');
 
 // Register custom menus and menu walkers
-require_once(get_template_directory().'/assets/functions/menu.php'); 
+require_once(get_template_directory().'/assets/functions/menu.php');
 
 // Register sidebars/widget areas
-require_once(get_template_directory().'/assets/functions/sidebar.php'); 
+require_once(get_template_directory().'/assets/functions/sidebar.php');
 
 // Makes WordPress comments suck less
-require_once(get_template_directory().'/assets/functions/comments.php'); 
+require_once(get_template_directory().'/assets/functions/comments.php');
 
 // Replace 'older/newer' post links with numbered navigation
-require_once(get_template_directory().'/assets/functions/page-navi.php'); 
+require_once(get_template_directory().'/assets/functions/page-navi.php');
 
 // Adds support for multiple languages
-require_once(get_template_directory().'/assets/translation/translation.php'); 
+require_once(get_template_directory().'/assets/translation/translation.php');
 
 // Remove 4.2 Emoji Support
-// require_once(get_template_directory().'/assets/functions/disable-emoji.php'); 
+// require_once(get_template_directory().'/assets/functions/disable-emoji.php');
 
 // Adds site styles to the WordPress editor
-//require_once(get_template_directory().'/assets/functions/editor-styles.php'); 
+//require_once(get_template_directory().'/assets/functions/editor-styles.php');
 
 // Related post function - no need to rely on plugins
-// require_once(get_template_directory().'/assets/functions/related-posts.php'); 
+// require_once(get_template_directory().'/assets/functions/related-posts.php');
 
 // Use this as a template for custom post types
 // require_once(get_template_directory().'/assets/functions/custom-post-type.php');
 
 // Customize the WordPress login menu
-// require_once(get_template_directory().'/assets/functions/login.php'); 
+// require_once(get_template_directory().'/assets/functions/login.php');
 
 // Customize the WordPress admin
 // require_once(get_template_directory().'/assets/functions/admin.php');
@@ -69,12 +69,12 @@ function my_theme_wrapper_end() {
   echo '</div></div>';
 }
 
-add_filter( 'woocommerce_product_add_to_cart_text', 'woo_archive_custom_cart_button_text' );    // 2.1 +
- 
+add_filter( 'woocommerce_product_single_add_to_cart_text', 'woo_archive_custom_cart_button_text' );    // 2.1 +
+
 function woo_archive_custom_cart_button_text() {
- 
+
         return __( 'Buy Now', 'fbcpress' );
- 
+
 }
 
 function custom_buy_now_button(){ ?>
@@ -90,4 +90,9 @@ function custom_buy_now_button(){ ?>
 	<?php
 
 }
-add_action( 'wp_footer', 'custom_buy_now_button', 10);
+//add_action( 'wp_footer', 'custom_buy_now_button', 10);
+
+add_filter('woocommerce_show_page_title', '__return_false');
+add_filter( 'woocommerce_get_breadcrumb', '__return_false' );
+remove_action('woocommerce_before_shop_loop', 'woocommerce_result_count', 20);
+remove_action('woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30);
