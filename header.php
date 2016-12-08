@@ -36,7 +36,7 @@
 
 	<!-- Uncomment this line if using the Off-Canvas Menu -->
 
-	<body <?php body_class(); ?>>
+	<body <?php if( is_page( array('basket', 'checkout') ) || is_front_page() ){ body_class('no-bg'); } else { body_class(); } ?>>
 
 		<div class="off-canvas-wrapper">
 

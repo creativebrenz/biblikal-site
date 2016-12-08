@@ -3948,7 +3948,7 @@ Stylesheet: Main Stylesheet
 /*********************
 GENERAL STYLES
 *********************/
-body:not(.post-type-archive-product) {
+body:not(.no-bg) {
   background-image: url("../images/biblikal-main-picture.jpg");
   background-repeat: no-repeat;
   background-size: auto 100%;
@@ -4269,6 +4269,13 @@ CUSTOM WOOCOMMERCE STYLES
   background-color: #ffc000;
   color: #333;
   border: 2px solid #333; }
+
+.woocommerce a.button.alt {
+  background-color: #ffc000;
+  color: #333; }
+
+.woocommerce a.button.alt:hover {
+  background-color: #997300; }
 
 .woocommerce button.button.alt.disabled {
   background-color: gray;
