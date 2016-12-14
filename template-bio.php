@@ -1,24 +1,29 @@
 <?php
 /*
-Template Name: Offset
+Template Name: Bio
 */
 ?>
 
 <?php get_header(); ?>
 
-	<div id="content" class="offset-page">
+	<div id="content" class="bio-page">
 
-		<div id="inner-content" class="row">
+		<div id="inner-content">
 
-		    <main id="main" class="medium-6 medium-offset-6 columns" role="main">
+		    <main id="main" role="main">
 
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 					<article id="post-<?php the_ID(); ?>" <?php post_class(''); ?> role="article" itemscope itemtype="http://schema.org/WebPage">
 
-					    <section class="entry-content" itemprop="articleBody">
-							    <?php the_content(); ?>
-							    <?php //wp_link_pages(); ?>
+					    <section class="row" itemprop="articleBody">
+								<div class="medium-4 columns">
+									<?php the_post_thumbnail('large'); ?>
+								</div>
+								<div class="medium-8 columns">
+									<?php the_content(); ?>
+									<?php //wp_link_pages(); ?>
+								</div>
 							</section> <!-- end article section -->
 
 						<footer class="article-footer">

@@ -3985,30 +3985,29 @@ HEADER STYLES
   position: relative;
   padding: 1rem; }
 
-#social-header {
-  position: absolute;
-  bottom: 30%;
-  right: 10px; }
-  #social-header li {
-    margin-right: 0; }
-    #social-header li a img {
-      max-width: 48px; }
+#social-header li {
+  margin-right: 0; }
+  #social-header li a img {
+    max-width: 34px; }
 
 /*********************
 NAVIGATION STYLES
 *********************/
+.header .nav-wrap {
+  border-top: 1px solid #773E18;
+  border-bottom: 1px solid #773E18; }
+
 .top-bar .title-area {
   z-index: 1; }
 
 .top-bar, .top-bar ul {
   background-color: transparent;
   text-transform: uppercase; }
-  .top-bar .menu .active > a, .top-bar a:hover, .top-bar a:focus, .top-bar ul .menu .active > a, .top-bar ul a:hover, .top-bar ul a:focus {
-    color: #773E18;
-    background-color: transparent;
-    border-bottom: 3px solid #773E18; }
   .top-bar a, .top-bar ul a {
     color: #333; }
+  .top-bar .menu .active > a, .top-bar a:hover, .top-bar a:focus, .top-bar ul .menu .active > a, .top-bar ul a:hover, .top-bar ul a:focus {
+    color: #773E18;
+    background-color: transparent; }
 
 .off-canvas-list ul {
   margin-left: 0; }

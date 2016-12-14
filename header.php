@@ -36,31 +36,29 @@
 
 	<!-- Uncomment this line if using the Off-Canvas Menu -->
 
-	<body <?php if( is_page( array('basket', 'checkout') ) || is_front_page() ){ body_class('no-bg'); } else { body_class(); } ?>>
+	<body <?php body_class('no-bg'); ?>>
 
 		<div class="off-canvas-wrapper">
 
 			<div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
 
-				<section class="expanded row">
+				<section>
 
-				<?php get_template_part( 'parts/content', 'offcanvas' ); ?>
+				<?php //get_template_part( 'parts/content', 'offcanvas' ); ?>
 
 				<div class="off-canvas-content" data-off-canvas-content>
 
 					<header class="header" role="banner">
 						<div id="title-header">
 							<h1 class="text-center"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/header-title.png" alt=""></h1>
-							<ul id="social-header" class="menu simple hide-for-small-only">
-								<li><a href=""><img src="<?php echo get_template_directory_uri(); ?>/assets/images/xfacebook.png" alt=""></a></li>
-								<li><a href=""><img src="<?php echo get_template_directory_uri(); ?>/assets/images/xinstagram.png" alt=""></a></li>
-								<li><a href=""><img src="<?php echo get_template_directory_uri(); ?>/assets/images/xtwitter.png" alt=""></a></li>
-								<li><a href=""><img src="<?php echo get_template_directory_uri(); ?>/assets/images/xyoutube.png" alt=""></a></li>
-							</ul>
 						</div>
 
 						 <!-- This navs will be applied to the topbar, above all content
 							  To see additional nav styles, visit the /parts directory -->
-						 <?php get_template_part( 'parts/nav', 'offcanvas-topbar-centered' ); ?>
+            <div class="nav-wrap">
+              <div class="row column">
+                <?php get_template_part( 'parts/nav', 'title-bar' ); ?>
+              </div>
+            </div>
 
 					</header> <!-- end .header -->
