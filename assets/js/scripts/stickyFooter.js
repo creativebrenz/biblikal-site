@@ -57,7 +57,7 @@ function mutationObjectCallback(mutationRecordsList) {
 //check for resize event
 window.onresize = function() {
 	stickyFooter();
-}
+};
 
 //lets get the marginTop for the <footer>
 function getCSS(element, property) {
