@@ -29,7 +29,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 ?>
 
 <div <?php post_class('medium-6 columns product'); ?> >
-	<div class="row collapse">
+	<div class="row">
 		<hr>
 
 		<div class="medium-6 columns">

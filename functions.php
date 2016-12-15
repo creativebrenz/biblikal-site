@@ -96,3 +96,5 @@ add_filter('woocommerce_show_page_title', '__return_false');
 add_filter( 'woocommerce_get_breadcrumb', '__return_false' );
 remove_action('woocommerce_before_shop_loop', 'woocommerce_result_count', 20);
 remove_action('woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30);
+
+//WOOCOMMERCE VARIATION MODS

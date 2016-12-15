@@ -4102,7 +4102,7 @@ POSTS & CONTENT STYLES
     color: #fefefe; }
 
 .album-preview {
-  margin-top: 1em; }
+  margin: 1em 0; }
 
 /*********************
 IMAGE GALLERY STYLES
@@ -4287,8 +4287,11 @@ CUSTOM WOOCOMMERCE STYLES
 .woocommerce div.product p.price {
   color: #5a5b5c; }
 
+.woocommerce div.product form.cart, .woocommerce div.product p.cart {
+  margin-bottom: 0; }
+
 .woocommerce div.product form.cart .variations td.value {
-  padding: 0; }
+  padding: 0 1em; }
   .woocommerce div.product form.cart .variations td.value select {
     margin-bottom: 5px; }
 
